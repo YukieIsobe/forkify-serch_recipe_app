@@ -1,0 +1,43 @@
+0 info it worked if it ends with ok
+1 verbose cli [
+1 verbose cli   '/usr/local/Cellar/node/14.3.0_1/bin/node',
+1 verbose cli   '/usr/local/bin/npm',
+1 verbose cli   'run',
+1 verbose cli   'build',
+1 verbose cli   '--no-cache',
+1 verbose cli   '--no-source-maps',
+1 verbose cli   '--no-scope-hoist',
+1 verbose cli   '--no-minify'
+1 verbose cli ]
+2 info using npm@6.14.4
+3 info using node@v14.3.0
+4 verbose run-script [ 'prebuild', 'build', 'postbuild' ]
+5 info lifecycle forkify_app@1.0.0~prebuild: forkify_app@1.0.0
+6 info lifecycle forkify_app@1.0.0~build: forkify_app@1.0.0
+7 verbose lifecycle forkify_app@1.0.0~build: unsafe-perm in lifecycle true
+8 verbose lifecycle forkify_app@1.0.0~build: PATH: /usr/local/lib/node_modules/npm/node_modules/npm-lifecycle/node-gyp-bin:/Users/jason/yukie/programing/complete-javascript-course-master/18-forkify/forkify_app/node_modules/.bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Library/Apple/usr/bin
+9 verbose lifecycle forkify_app@1.0.0~build: CWD: /Users/jason/yukie/programing/complete-javascript-course-master/18-forkify/forkify_app
+10 silly lifecycle forkify_app@1.0.0~build: Args: [ '-c', 'parcel build index.html' ]
+11 silly lifecycle forkify_app@1.0.0~build: Returned: code: 1  signal: null
+12 info lifecycle forkify_app@1.0.0~build: Failed to exec build script
+13 verbose stack Error: forkify_app@1.0.0 build: `parcel build index.html`
+13 verbose stack Exit status 1
+13 verbose stack     at EventEmitter.<anonymous> (/usr/local/lib/node_modules/npm/node_modules/npm-lifecycle/index.js:332:16)
+13 verbose stack     at EventEmitter.emit (events.js:315:20)
+13 verbose stack     at ChildProcess.<anonymous> (/usr/local/lib/node_modules/npm/node_modules/npm-lifecycle/lib/spawn.js:55:14)
+13 verbose stack     at ChildProcess.emit (events.js:315:20)
+13 verbose stack     at maybeClose (internal/child_process.js:1051:16)
+13 verbose stack     at Process.ChildProcess._handle.onexit (internal/child_process.js:287:5)
+14 verbose pkgid forkify_app@1.0.0
+15 verbose cwd /Users/jason/yukie/programing/complete-javascript-course-master/18-forkify/forkify_app
+16 verbose Darwin 20.3.0
+17 verbose argv "/usr/local/Cellar/node/14.3.0_1/bin/node" "/usr/local/bin/npm" "run" "build" "--no-cache" "--no-source-maps" "--no-scope-hoist" "--no-minify"
+18 verbose node v14.3.0
+19 verbose npm  v6.14.4
+20 error code ELIFECYCLE
+21 error errno 1
+22 error forkify_app@1.0.0 build: `parcel build index.html`
+22 error Exit status 1
+23 error Failed at the forkify_app@1.0.0 build script.
+23 error This is probably not a problem with npm. There is likely additional logging output above.
+24 verbose exit [ 1, true ]

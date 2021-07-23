@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="src/sass/main.scss">
+  <title>Document</title>
+  <script defer src="./src/js/controller.js"></script>
+</head>
+<body>
+  <div class="container">
+    <header class="header">
+      <img src="src/img/logo.png" alt="app-logo" class="header__logo">
+      <form action="" class="search">
+        <input type="text" class="search__field" placeholder="Search over 1,000,000 recipes...">
+        <button class="btn search__btn">
+          <svg class="search__icon">
+            <use xlink:href="src/img/icons.svg#icon-search"></use>
+          </svg>
+          <span>search</span>
+        </button>
+      </form>
+  
+      <nav class="nav">
+        <ul class="nav__list">
+          <li class="nav__item">
+            <button class="nav__btn nab__btn--add-recipe">
+              <svg class="nav__icon">
+                <use xlink:href="src/img/icons.svg#icon-edit"></use>
+              </svg>
+              <span>add recipe</span>
+            </button>
+          </li>
+          <li class="nav__item">
+            <button class="nav__btn nav__btn--bookmarks">
+              <svg class="nav__icon">
+                <use xlink:href="src/img/icons.svg#icon-bookmark"></use>
+              </svg>
+              <span>bookmarks</span>
+            </button>
+            <div class="bookmarks">
+              <ul class="bookmarks__list">
+                <div class="message">
+                  <div>
+                    <svg class="message__icon">
+                      <use xlink:href="src/img/icons.svg#icon-smile"></use>
+                    </svg>
+                  </div>
+                  <div>
+                    <p>No bookmarks yet. find nice recipe!</p>
+                  </div>
+                </div>
+                
+                <!-- <li class="preview">
+                  <a href="1234" class="preview__link">
+                    <figure class="preview__fig">
+                      <img src="src/img/favicon.png" alt="">
+                    </figure>
+                    <div class="preview__data">
+                      <h4 class="preview__title">homemade pizza homemade pizza homemade pizza</h4>
+                      <p class="preview__publisher">simply recipes</p>
+                      <div class="preview__user-generated">
+                        <svg class="preview__icon">
+                          <use xlink:href="src/img/icons.svg#icon-user"></use>
+                        </svg>
+                      </div>
+                    </div>
+                  </a>
+                </li> -->
+              </ul>
+            </div> 
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <div class="search-results">
+      <ul class="search-results__list">
+        <!-- <li class="preview">
+          <a href="1234" class="preview__link">
+            <figure class="preview__fig">
+              <img src="src/img/favicon.png" alt="">
+            </figure>
+            <div class="preview__data">
+              <h4 class="preview__title">homemade pizza homemade pizza homemade pizza</h4>
+              <p class="preview__publisher">simply recipes</p>
+              <div class="preview__user-generated">
+                <svg class="preview__icon">
+                  <use xlink:href="src/img/icons.svg#icon-user"></use>
+                </svg>
+              </div>
+            </div>
+          </a>
+        </li> -->
+      </ul>
+      <div class="pagination">
+        <!-- <button class="pagination__btn pagination__btn--prev">
+          <svg class="pagination__icon">
+            <use xlink:href="src/img/icons.svg#icon-arrow-left"></use>
+          </svg>
+          <span>Page 2</span>
+        </button>
+        <button class="pagination__btn pagination__btn--next">
+          <span>Page 2</span>
+          <svg class="pagination__icon">
+            <use xlink:href="src/img/icons.svg#icon-arrow-right"></use>
+          </svg>
+        </button> -->
+      </div>
+      <div class="copyright">
+        &copy; Copyright by<a class="copyright__twitter" href="https://twitter.com/jonasschmedtman" target="_blank"> Jonas Schmedmann</a>. Use for learning or your portfolio. Don't use to teach. Don't claim
+        as your own.
+      </div>
+    </div> 
+
+    <div class="recipe">
+      <div class="recipe__error">
+        <svg class="recipe__error-icon">
+          <use xlink:href="src/img/icons.svg#icon-alert-triangle"></use>
+        </svg>
+        <p class="recipe__error-message">
+          Let's search your favorite recipe!
+        </p>
+      </div>
+      <!-- <div class="recipe__error">
+        <svg class="recipe__error-icon">
+          <use xlink:href="src/img/icons.svg#icon-alert-triangle"></use>
+        </svg>
+        <p class="recipe__error-message">
+          We could not find that recipe. Please try another one!
+        </p>
+      </div> -->
+
+      <!-- <div class="spinner">
+        <svg class="spinner__icon">
+          <use xlink:href="src/img/icons.svg#icon-loader"></use>
+        </svg>
+      </div> -->
+
+      <!-- <div class="recipe__mainvisual">
+        <img src="src/img/pizza.jpg" alt="" class="recipe__image">
+        <h1 class="recipe__title"><span>lamb kebabs with mint pesto</span></h1>
+      </div>
+
+      <div class="recipe__details">
+        <div class="recipe__info">
+          <div class="recipe__info-icon">
+            <svg class="recipe__info-icon">
+              <use xlink:href="src/img/icons.svg#icon-clock"></use>
+            </svg>
+          </div>
+          <div class="recipe__info-texts">
+            <span class="recipe__info-data recipe__info-data--minutes">90</span>
+            <span class="recipe__info-text">minutes</span>
+          </div>
+        </div>
+        <div class="recipe__info">
+          <div>
+            <svg class="recipe__info-icon">
+              <use xlink:href="src/img/icons.svg#icon-users"></use>
+            </svg>recipe__servings-btn
+          </div>
+          <div class="recipe__info-texts">
+            <span class="recipe__info-data recipe__info-data--servings">4</span>
+            <span class="recipe__info-text">servings</span>
+          </div>
+          <div class="recipe__servings-buttons">
+            <svg class="recipe__servings-btn recipe__servings-btn--minus">
+              <use xlink:href="src/img/icons.svg#icon-minus-circle"></use>
+            </svg>
+            <svg class="recipe__servings-btn recipe__servings-btn--plus">
+              <use xlink:href="src/img/icons.svg#icon-plus-circle"></use>
+            </svg>
+          </div>
+        </div>
+
+        <div class="recipe__user-generated-icon">
+          <svg class="recipe__info-right-icon recipe__info-right-icon--user">
+            <use xlink:href="src/img/icons.svg#icon-user"></use>
+          </svg>
+        </div>
+        <button class="recipe__bookmark-icon">
+          <svg class="recipe__info-right-icon recipe__info-right-icon--bookmark">
+            <use xlink:href="src/img/icons.svg#icon-bookmark-fill"></use>
+          </svg>
+        </button>
+      </div>
+
+      <div class="recipe__ingredients">
+        <h2 class="heading-h2">
+          recipe ingredients
+        </h2>
+        <ul class="recipe__ingredients-list">
+          <li class="recipe__ingredients-item">
+            <svg class="recipe__ingredient-icon">
+              <use xlink:href="src/img/icons.svg#icon-check"></use>
+            </svg>
+            <div class="recipe__quantity">1000</div>
+            <div class="recipe__description">
+              <span class="recipe__unit">g</span>
+              pasta
+            </div>
+          </li>
+          <li class="recipe__ingredients-item">
+            <svg class="recipe__ingredient-icon">
+              <use href="src/img/icons.svg#icon-check"></use>
+            </svg>
+            <div class="recipe__quantity">0.5</div>
+            <div class="recipe__description">
+              <span class="recipe__unit">cup</span>
+              ricotta cheese
+            </div>
+          </li>
+          <li class="recipe__ingredients-item">
+            <svg class="recipe__ingredient-icon">
+              <use href="src/img/icons.svg#icon-check"></use>
+            </svg>
+            <div class="recipe__quantity">0.5</div>
+            <div class="recipe__description">
+              <span class="recipe__unit">cup</span>
+              ricotta cheese
+            </div>
+          </li>
+        </ul>
+      </div>
+
+      <div class="recipe__directions">
+        <h2 class="heading-h2">how to cook it</h2>
+        <p class="recipe__directions-text">This recipe was carefully designed and tested by <span class="recipe__publisher">All Recipes</span>. Please check out directions at their website.</p>
+        <button class="btn recipe__directions-btn">
+          <span>directions</span>
+          <svg class="recipe__directions-btn-icon">
+            <use xlink:href="src/img/icons.svg#icon-arrow-right"></use>
+          </svg>
+        </button>
+      </div> -->
+    </div>
+  </div>
+  <div class="overlay hidden"></div>
+  <div class="upload-container hidden">
+    <button class="close-btn">&times;</button>
+<!-- 
+    <div class="upload-message-container">
+      <div class="upload-message">
+        <svg class="upload-message__icon">
+          <use xlink:href="src/img/icons.svg#icon-smile"></use>
+        </svg>
+        <p class="upload-message__message">
+          omedetou!!
+        </p>
+      </div>
+    </div> -->
+
+    <form class="upload">
+      <div class="upload__grid">
+        <div class="upload__block">
+          <h3 class="heading-3">recipe data</h3>
+          <div class="upload__content">
+            <label>Title</label>
+            <input type="text" name="title" class="upload__input" value="Yuki's new Recipe">
+          </div>
+          <div class="upload__content">
+            <label>URL</label>
+            <input type="text" name="sourceUrl" class="upload__input" value="Test23">
+          </div>
+          <div class="upload__content">
+            <labe>Image URL</labe>
+            <input type="text" name="imageUrl" class="upload__input" value="Test23">
+          </div>
+          <div class="upload__content">
+            <label>Publisher</label>
+            <input type="text" name="publisher" class="upload__input" value="Test23">
+          </div>
+          <div class="upload__content">
+            <label>Prep time</label>
+            <input type="text" name="prepTime" class="upload__input" value="20">
+          </div>
+          <div class="upload__content">
+            <label>Servings</label>
+            <input type="text" name="servings" class="upload__input" value="3">
+          </div>
+        </div>
+        <div class="upload__block">
+          <h3 class="heading-3">ingredients</h3>
+          <div class="upload__content">
+            <label>Ingredient 1</label>
+            <input type="text" name="ingredient-1" class="upload__input" value="0.5,kg,Rice">
+          </div>
+          <div class="upload__content">
+            <label>Ingredient 2</label>
+            <input type="text" name="ingredient-2" class="upload__input" value="1,,Avocado">
+          </div>
+          <div class="upload__content">
+            <label>Ingredient 3</label>
+            <input type="text" name="ingredient-3" class="upload__input" value="">
+          </div>
+          <div class="upload__content">
+            <label>Ingredient 4</label>
+            <input type="text" name="ingredient-4" class="upload__input" value="">
+          </div>
+          <div class="upload__content">
+            <label>Ingredient 5</label>
+            <input type="text" name="ingredient-5" class="upload__input" value="">
+          </div>
+          <div class="upload__content">
+            <label>Ingredient 6</label>
+            <input type="text" name="ingredient-6" class="upload__input" value="">
+          </div>
+        </div>  
+      </div>
+      <button class="btn upload__btn">
+        <svg class="upload__icon">
+          <use xlink:href="src/img/icons.svg#icon-upload-cloud"></use>
+        </svg>
+        <span>upload</span>
+      </button>
+    </form>
+  </div>
+</body>
+</html>
